@@ -5,7 +5,16 @@ Just a learning project on Spring
 ## Getting Started
 Project was generated from https://start.spring.io/ then customised to use webflux, with added unit and integration tests separation
 
-## Build native image
+### Run development mode
+```shell script
+mvn spring-boot:run
+```
+
+devtools will hot reload the application
+
+Note: if you get an error, try `mvn clean` first.
+
+### Build native image
 Native image is still at an experimental stage for Spring
 
 ```shell script
