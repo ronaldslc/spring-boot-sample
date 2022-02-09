@@ -20,7 +20,7 @@ public class LoggingConfiguration {
     public Logger logger(final InjectionPoint ip) {
         return LoggerFactory.getLogger(
                 of(ip.getMethodParameter())
-                        .<Class>map(MethodParameter::getContainingClass)
+                        .<Class<?>>map(MethodParameter::getContainingClass)
                         .orElseGet(() -> ofNullable(ip.getField())
                                 .map(Field::getDeclaringClass)
                                 .orElseThrow(IllegalArgumentException::new)));
