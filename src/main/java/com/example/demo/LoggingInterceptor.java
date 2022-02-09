@@ -1,7 +1,6 @@
 package com.example.demo;
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
@@ -13,7 +12,11 @@ import reactor.core.publisher.Mono;
 @Component
 public class LoggingInterceptor implements WebFilter {
 
-    private static final Logger logger = LoggerFactory.getLogger(LoggingInterceptor.class);
+    private final Logger logger;
+
+    public LoggingInterceptor(Logger logger) {
+        this.logger = logger;
+    }
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, WebFilterChain chain) {
