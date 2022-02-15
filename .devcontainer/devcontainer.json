@@ -25,6 +25,7 @@
 	"extensions": [
 		"vscjava.vscode-java-pack",
 		"pivotal.vscode-boot-dev-pack",
+		"GabrielBB.vscode-lombok",
 		"redhat.fabric8-analytics"
 	],
 
