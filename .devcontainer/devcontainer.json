@@ -32,6 +32,11 @@
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
+	// ensure we can reference host machine from within container (to test local kafka for example)
+	"runArgs": [
+		"--add-host=host.docker.internal:host-gateway"
+	],
+
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "java -version",
 
