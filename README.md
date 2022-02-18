@@ -7,6 +7,8 @@ Project was generated from https://start.spring.io/ then customised to use webfl
 
 ### Run development mode
 ```shell script
+docker-compose -f docker/kafka/docker-compose.yml up -d
+docker exec broker1 kafka-topics --create --bootstrap-server broker1:29091 --replication-factor 3 --partitions 9 --topic fruits
 mvn spring-boot:run
 ```
 
