@@ -3,15 +3,10 @@ package com.example.demo.json;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.LinkedHashMap;
-import java.util.Properties;
 import java.util.Set;
-
-import javax.annotation.PreDestroy;
 
 import com.example.demo.service.FruitProducer;
 
-import org.apache.kafka.clients.producer.RecordMetadata;
-import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.support.KafkaHeaders;
 import org.springframework.messaging.handler.annotation.Header;
